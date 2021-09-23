@@ -1,6 +1,6 @@
 <template>
     <article class="art__listings">
-        <div v-show="listEmpty" class="main">
+        <div class="main">
             <section class="side">
                 <form action="" method="get">
                     <label for="">
@@ -58,7 +58,6 @@
                 </div>
             </section>
         </div>
-        <h2 v-show="!listEmpty">Sorry! There are no paintings to view.</h2>
     </article>
 </template>
 
@@ -71,7 +70,6 @@ export default {
     components: {},
     data() {
         return {
-            listEmpty: true,
             sortCriteria: 'longTitle',
         };
     },
