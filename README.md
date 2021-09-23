@@ -7,10 +7,8 @@ It is a two part test.
 [Link to Test](/)
 
 ## Anagram Program 
-The program should take a list of any number of strings and determines which words in the list are exact anagrams of each other. 
-1. Users to see a list of at least 100 dog images by default when they load the application.  
-2. Users be able to click on a dog image and be routed to a page where there’s more information about the dog.
-3. Users should be able to search for a dog via their breeds.
+The program should take a list of any number of strings and determines which words in the list are exact anagrams of each other.
+
 
 ### The SPA is expected to have:
 1. The application should mandatorily use a state machine (use Vuex).
