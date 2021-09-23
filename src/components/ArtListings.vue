@@ -43,6 +43,8 @@
                                 :alt="item.title"
                                 class="art__item-img"
                                 loading="lazy"
+                                width="100%"
+                                height="100%"
                             />
                             <div class="art__item-details">
                                 <div class="art__item-num">
