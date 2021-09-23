@@ -1,2 +1,0 @@
-[build]
-    command = "chmod +x ./bin/env.sh && ./bin/env.sh > ./js/config.js"
