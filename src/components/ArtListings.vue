@@ -11,7 +11,9 @@
                                 data-input="select"
                                 v-model="sortCriteria"
                             >
-                                <option selected="" value="relevance">Relevance</option>
+                                <option selected="" value="relevance">
+                                    Relevance
+                                </option>
                                 <option value="longTitle">
                                     Title A &gt; Z
                                 </option>

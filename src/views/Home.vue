@@ -12,7 +12,6 @@
 import Header from '@/components/Header.vue';
 import ArtListings from '@/components/ArtListings.vue';
 
-
 export default {
     name: 'Home',
     components: {

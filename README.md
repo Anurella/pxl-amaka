@@ -4,26 +4,32 @@ It is a two part test.
 1. Anagram Program
 2. Museum Site
 
-[Link to Test](/)
+[Link to Demo](https://laughing-newton-8ef95f.netlify.app/anagram)
 
 ## Anagram Program 
 The program should take a list of any number of strings and determines which words in the list are exact anagrams of each other.
 
+### Approach 
+1. Change each word to lowercase, remove spaces, rearrange the alphabets and join.
+2. Creating a key value pair of the characters, the characters are arranged so one key will be created regardless of the number of times it appears.
+3. The anagrams will be returned.
 
-### The SPA is expected to have:
-1. The application should mandatorily use a state machine (use Vuex).
-2. Good loading indicator or mechanism on the SPA so that users can know that they are expecting a response instead of a blank page.
-3. Lazy loading of the images (In simple & clear terms, images that the user can’t see shouldn’t be loaded until the user scrolls down to them)
-4. Client-side caching to avoid multiple round trips to the server API.
-5. The application should be responsive.
-6. The codebase should be component based, clean, maintainable and reusable.
-7. The application should have a very neat and decent UI.
+## Museum Site
+A simple application to display data fetched from the Rijksmuseum API.
+
+### The Museum site has:
+1. A state (using Vuex), client-side caching to avoid multiple round trips to the server API.
+2. The site is responsive.
+3. The application has a very neat and decent UI.
+4. Used loadash library for the order by function.
 
 #### Issues Encountered 
-1. The api that generates random images regardless of the breed has a maximum amount of 50 as the number of random images it can send. I refactored the application to load a default breed so I could fetch 100 images.
+1. The best way to use the library as I have never used the loadash library before
+2. Focused on the UI as my strong point is `front of the front end`
+3. Had issues building on Netlify, so I had to build on local first.
 
 ## Working Demo  
-This [application](https://amazing-pare-62e287.netlify.app/) is hosted on Netlify.
+This [application](https://laughing-newton-8ef95f.netlify.app/anagram) is hosted on Netlify.
 
 ## Project setup on local
 ```
@@ -37,5 +43,3 @@ npm run serve
 ```
 npm run lint
 ```
-### Image Loader 
-[VueClazy](https://github.com/matheusgrieger/vue-clazy-load/blob/d8a99185ea7e84e6288f5531a9bc5150c5f70081/example/assets/css/main.css) was used to monitor when the image loaded fully.
