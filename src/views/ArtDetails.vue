@@ -1,6 +1,7 @@
 <template>
     <div class="wrapper">
-        <Header />
+        <SiteHeader />
+        <bread-crumbs :crumbs="crumbs" :currentPage="1" />
         <main>
             <article class="single__art">
                 <div class="single__art-img">
@@ -47,18 +48,21 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
+import SiteHeader from '@/components/Header.vue';
+import BreadCrumbs from '@/components/BreadCrumbs.vue';
 
 export default {
     name: 'ArtDetails',
     components: {
-        Header,
+        SiteHeader,
+        BreadCrumbs,
     },
     data() {
         return {
             objectDetails: '',
             objectUrl: '',
             objectDescription: '',
+            crumbs: ['Home', 'Testing', 'Art'],
         };
     },
     created() {},

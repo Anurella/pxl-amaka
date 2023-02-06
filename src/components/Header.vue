@@ -1,64 +1,30 @@
 <template>
-    <header>
-        <router-link to="/" class="logo">
-            <span class="logo__icon">
-                <svg
-                    width="40"
-                    height="30"
-                    viewBox="0 0 40 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M26.1405 29.4955L10.9564 3.43547H26.6171L25.0325 6.05385H16.4469L30.0279 29.4955H26.1405V29.4955ZM15.178 29.4955L0 3.43547H3.89353L19.0715 29.4955H15.178V29.4955ZM4.20922 3.11359L5.71959 0.495203L19.1458 23.7759L20.6561 21.1513L22.4079 24.0916L19.3872 29.3408L4.20922 3.11359ZM17.2454 6.61096H20.1052L30.1455 23.8564L38.2544 9.94738L40 12.8876L30.4673 29.3408L17.2454 6.61096V6.61096ZM28.4494 20.0433L34.4104 9.78644H37.6664L31.9468 19.7214L30.0898 22.9031L28.4494 20.0433ZM17.4807 20.0433L18.7558 17.8954L20.4209 20.6747L19.1458 22.9031L17.4807 20.0433V20.0433ZM24.8716 13.9214L32.7391 0.414732L34.4847 3.42928L26.6171 16.9421L24.8716 13.9214V13.9214ZM22.8846 10.653L27.2609 3.02074H11.1297L12.9867 0H32.4543L24.6363 13.5252L22.8846 10.653V10.653ZM0.160941 3.03312L1.90653 0.0123801H5.38533L3.63355 3.03312H0.160941Z"
-                        fill=""
-                    />
-                </svg>
-            </span>
-            <span class="logo__text"> PXL Museum </span>
-        </router-link>
-        <div class="">
-            <div class="search" v-if="!isLoading">
-                <form @submit.prevent="processForm">
-                    <label for="search" data-field="">
-                        <span data-label=""> Search </span>
-                        <input
-                            type="search"
-                            name="search"
-                            role="searchbox"
-                            autocomplete="on"
-                            aria-label="Search"
-                            placeholder="For Artists, Color"
-                            v-model="criteria"
-                        />
-                    </label>
-                </form>
-            </div>
-            <div v-if="isLoading" class="loading">Searching...</div>
-            <div v-if="isError" class="error">
-                <p>We are sorry but we could not match your search.</p>
-            </div>
-        </div>
-    </header>
+    <SiteHeader>
+        <nav>
+            <ul>
+                <li>This will be the nav</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </SiteHeader>
 </template>
+
 <script>
+import styled from 'vue-styled-components';
+
+
+const SiteHeader = styled.header`
+    background: papayawhip;
+    padding: 20px;
+    color: var(--grash-100);
+`;
+
 export default {
-    name: 'Header',
-    data() {
-        return {
-            isLoading: false,
-            isError: false,
-            criteria: '',
-        };
-    },
-    methods: {
-        processForm() {
-            this.isLoading = true;
-            let tempCriteria = this.criteria.toLowerCase();
-            this.$store.dispatch('searchCollection', tempCriteria).then(() => {
-                this.isLoading = false;
-            });
-        },
+    components: {
+        SiteHeader,
     },
 };
 </script>

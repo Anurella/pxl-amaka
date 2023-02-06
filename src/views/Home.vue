@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <Header />
+        <SiteHeader />
         <main class="">
             <ArtListings />
         </main>
@@ -9,13 +9,13 @@
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/Header.vue';
+import SiteHeader from '@/components/Header.vue';
 import ArtListings from '@/components/ArtListings.vue';
 
 export default {
     name: 'Home',
     components: {
-        Header,
+        SiteHeader,
         ArtListings,
     },
     data() {

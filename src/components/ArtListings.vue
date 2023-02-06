@@ -56,6 +56,7 @@
                                 <span class="art__item-author">
                                     {{ item.principalOrFirstMaker }}
                                 </span>
+                                <SiteButton small> View </SiteButton>
                             </div>
                         </figure>
                     </router-link>
@@ -67,11 +68,14 @@
 
 <script>
 import _sortBy from 'lodash/sortBy';
+import SiteButton from '@/components/Buttons.vue';
 // import _pluck from 'lodash';
 
 export default {
     name: 'ArtListings',
-    components: {},
+    components: {
+        SiteButton,
+    },
     data() {
         return {
             sortCriteria: 'longTitle',

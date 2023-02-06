@@ -15,7 +15,7 @@ export default {
 <style lang="scss">
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: var(--grash-100);
+        background-color: var(--grash-400);
         color: var(--grash-500);
     }
 }
